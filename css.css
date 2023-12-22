@@ -4,42 +4,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
 /* ========== CSS Variables =========== */
 
+:root {
+    --primary-color: #f94a3d;
+    --primary-color-2: #f94a3d42;
+    --yellow-color: #ffcf03;
+    --black-color: #212244;
+    --default-color: #69697b;
+    --deep-yellow: #ff9401;
+    --yellow-color-1: #ffe507;
+    --red-color-1: #e83b2e;
+    --red-color-2: #ee3e32;
+    --light-red-color: #fdecec;
+    --grey-color: #eaeaea;
+    --grey-color-1: #f8f8f8;
+    --white-color: #fff;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+  
+
 body{
     font-family: 'Comfortaa', cursive !important;
-    color: #fff !important;
     width: 100%;
-    background-image: url('../images/bg-geka-black.png');
-    background-attachment: fixed;
 }
 
 h1{
     color: #fff !important;
 }
-h2, h3, h4, h5, h6{
-    color: #fff !important;
-}
 
-p span{
-    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 h1 span{
-    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    background: linear-gradient(90deg, #F860D8 0.06%, var(--primary-color) 50.73%, var(--deep-yellow) 100.06%),
     linear-gradient(0deg, #FFFFFF, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 h2 span{
-    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-h3 span{
-    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background: linear-gradient(to right, #b30c89 0%, #f1a817 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -63,28 +62,193 @@ h6::before{
 
 .navbar{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    color: #fff !important;
+    z-index: 9999999999 !important;
 }
 
 #header-page{
-    text-align: center;
+    text-align: left;
     padding: 50px;
     min-height: 670px;
-}
-
-.card-title{
-    line-height: normal;
-    margin-bottom: 20px;
+    background-image: url('../images/bg-travel-header.png');
+    background-position: left top;
+    background-size: cover;
+    
 }
 
 #header-page h1{
     font-weight: 900;
+    font-size: 77px;
     margin: 40px 0;
     color: #222;
-    line-height: 50px;
-    text-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    line-height: auto;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px !important;
 }
 
+#header-page p{
+    font-weight: 900;
+    font-size: 22px;
+    color: #222;
+}
+#header-page-menu{
+    text-align: left;
+    padding: 50px;
+    min-height: 670px;
+    background-image: url('../images/bg-coffee-header.png');
+    background-position: left top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#header-page-menu img{
+    width: 100%;    
+}
+
+#header-page-menu p{
+    font-weight: 900;
+    font-size: 22px;
+    color: #222;
+}
+
+
+#layanan{
+    padding: 100px 50px;
+    color: #222222;
+}
+
+#layanan h1{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 66px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-mo{
+    text-shadow: #11d0fb;
+}
+
+#layanan .col-md-2{
+    text-align: justify;
+}
+
+#layanan .col-md-2 .card{
+    text-align: center;
+    padding: 30px 5px;
+    border: 10px solid var(--primary-color-2);
+    border-radius: 12px;
+}
+#layanan .col-md-2 .card:hover{
+    border: 10px solid var(--primary-color);
+    cursor: pointer;
+}
+
+#layanan img{
+    width: 90%;
+    height: auto;
+    border-radius: 42px 0px 0px 42px !important;
+}
+
+#tujuan-populer{
+    padding: 100px 50px;
+}
+
+#tujuan-populer .col-md-3{
+    padding: 0px 10px;
+}
+#tujuan-populer .col-md-3 img{
+    height: 150px;
+    width: 100%;
+    
+}
+
+#tujuan-populer .card{
+    font-size: smaller;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px !important;
+}
+
+#tujuan-populer .card .list-group-flush{
+    border: none !important;
+}
+
+#tujuan-populer .card ul li{
+    border: none !important;
+    background: none !important;
+}
+
+#tujuan-populer .card .harga-coret{
+    color: var(--default-color);
+    text-decoration: line-through;
+}
+#tujuan-populer .card .harga-promo{
+    color: var(--primary-color);
+    font-size: 17px;
+    font-weight: 900;
+    margin-top: -20px;
+}
+
+#menu-coffee{
+    padding: 100px 50px;
+    color: #222222;
+    background: #ededed;
+}
+
+#menu-coffee h1{
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 66px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-mo{
+    text-shadow: #11d0fb;
+}
+
+#menu-coffee .col-md-6{
+    text-align: left !important;
+    font-size: larger;
+    font-weight: 700;
+}
+#menu-coffee .col-md-4 img{
+    border-radius: 32px;
+}
+
+#menu-coffee img{
+    width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 50%;
+}
+
+#promo-coffee{
+    padding: 100px 50px;
+    color: #222222;
+    background: #fff;
+}
+
+#promo-coffee h1{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 66px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-mo{
+    text-shadow: #11d0fb;
+}
+
+#promo-coffee .col-md-6{
+    text-align: left !important;
+    font-size: larger;
+    font-weight: 700;
+}
+
+#promo-coffee img{
+    width: 90%;
+    height: auto;
+    float: right;
+    border-radius: 32px;
+}
 
 #milestone{
     padding: 1px 100px;
@@ -93,29 +257,24 @@ h6::before{
 
 #milestone .card{
     border: none !important;
-    background: none !important;
 }
 #milestone h4{
     font-weight: 800;
 }
 #milestone p{
     font-weight: 600;
-    color: #fff !important;
 }
 
 #milestone .ms-a{
     margin-top: -50px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+    background-color: #ffffff;
     border-radius: 24px;
     padding: 16px;
     background-image: url('../images/Picture19.svg');
     background-position: left bottom;
     background-repeat: repeat-x;
     background-size: 100px;
-    border:1px solid rgb(67, 65, 65) !important;
 }
 #milestone .ms-o{
     padding: 10px 30px;
@@ -163,9 +322,8 @@ h6::before{
 }
 
 #about{
-    background-image: url('../images/bg-9.svg');
-    background-size: 25%;
-    background-repeat: no-repeat;
+    background-image: url('../images/bg-geka-home3.jpg');
+    background-size: cover;
     background-position: left bottom;
     color: #ffffff !important;
     padding: 50px 0;
@@ -209,19 +367,13 @@ h6::before{
 }
 
 #journey .card-o{
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border:1px solid rgb(67, 65, 65) !important;
-    border-radius: 32px;
+    background-color: #ffffff;
     background-image: url('../images/Picture42.svg');
     background-size: 120px;
     background-position: right bottom;
     background-repeat: no-repeat;
     text-align: left;
     min-height: 280px;
-    overflow: hidden;
-    color: #fff !important;
 }
 #journey .card-body{
     background: none !important;
@@ -235,21 +387,19 @@ h6::before{
 
 #journey span{
     text-align: right;
-    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #3c2ba9;
     font-weight: 700;
 }
 
 #services{
+    background-color: #F8F8F8;
     padding: 50px 0;
 }
 
 #services h1{
     text-align: right;
     font-weight:900;
-    color: #100f0f6a !important;
+    color: #dedede6a;
     font-size: 66px;
     margin-top: -60px;
     margin-right: 10px;
@@ -269,13 +419,7 @@ h6::before{
 }
 
 #services .card-o{
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border:1px solid rgb(67, 65, 65) !important;
-    border-radius: 32px;
-    color: #fff !important;
-    padding: 30px 20px;
+    background: #ffffff;
 }
 
 #services .card-o:hover{
@@ -307,6 +451,10 @@ h6::before{
     background-size: 50%;
 }
 
+#about-services .col-md-4{
+    margin-bottom: 30px !important;
+}
+
 #about-services h1{
     text-align: left;
     font-weight:900;
@@ -329,41 +477,43 @@ h6::before{
     font-weight: 800;
 }
 
-#about-services .card-body{
-    margin-top: -70px;
+
+#about-services .card-o img{
+    border-radius: 7px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
 }
 
 #about-services .card-o{
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border-radius: 32px;
-    border:1px solid rgb(67, 65, 65) !important;
-    color: #ffffff !important;
+    background: #fff;
+    color: #5d4dc5 !important;
     overflow: hidden;
     transition: transform 300ms ease-out;
+    border-radius: 11px;
+    padding: 10px;
+    box-shadow: -1px 10px 18px -11px rgba(0,0,0,0.5);
+-webkit-box-shadow: -1px 10px 18px -11px rgba(0,0,0,0.5);
+-moz-box-shadow: -1px 10px 18px -11px rgba(0,0,0,0.5);
+    border: none !important;
+
 }
 
 #about-services .card-o:hover{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
     cursor: pointer;
+    background-color: #fff;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1018%26quot%3b)' fill='none'%3e%3cpath d='M24 250L274 0L506.5 0L256.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1019%26quot%3b)'%3e%3c/path%3e%3cpath d='M283.6 250L533.6 0L700.1 0L450.1 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1019%26quot%3b)'%3e%3c/path%3e%3cpath d='M506.20000000000005 250L756.2 0L919.7 0L669.7 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1019%26quot%3b)'%3e%3c/path%3e%3cpath d='M759.8000000000001 250L1009.8000000000001 0L1113.3000000000002 0L863.3000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1019%26quot%3b)'%3e%3c/path%3e%3cpath d='M1399 250L1149 0L987 0L1237 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1020%26quot%3b)'%3e%3c/path%3e%3cpath d='M1196.4 250L946.4000000000001 0L733.4000000000001 0L983.4000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1020%26quot%3b)'%3e%3c/path%3e%3cpath d='M947.8 250L697.8 0L379.79999999999995 0L629.8 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1020%26quot%3b)'%3e%3c/path%3e%3cpath d='M692.1999999999999 250L442.19999999999993 0L305.69999999999993 0L555.6999999999999 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1020%26quot%3b)'%3e%3c/path%3e%3cpath d='M1222.7757852524394 250L1440 32.775785252439334L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1019%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L217.22421474756067 250L 0 32.775785252439334z' fill='url(%26quot%3b%23SvgjsLinearGradient1020%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1018'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1019'%3e%3cstop stop-color='rgba(71%2c 34%2c 193%2c 0.13)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(71%2c 34%2c 193%2c 0.13)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1020'%3e%3cstop stop-color='rgba(71%2c 34%2c 193%2c 0.13)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(71%2c 34%2c 193%2c 0.13)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");    color:#4f3eb9 !important ;
     background-repeat: repeat-x;
     background-size: 300px;
     background-position: left bottom;
-    transform: translate(0px, 0px) scale(1, 1.1);
-    color: #fff !important;
-    border:1px solid rgb(109, 106, 106) !important;
+
 }
 #about-services .card-o:hover a{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
     cursor: pointer;
-    background-color: #fff;
     color:#4f3eb9 !important ;
 }
 
 #about-services a{
-    color: #ffffff !important;
+    color: #5d4dc5 !important;
     text-decoration:none !important;
 }
 
@@ -374,6 +524,13 @@ h6::before{
     background-repeat: repeat-y;
     background-size: cover;
     background-position: left top;
+}
+
+#us-about h2{
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #aboutus img{
@@ -395,6 +552,24 @@ h6::before{
     text-align: left;
     margin-bottom: 30px;
     line-height: 30px;
+    text-align: justify;
+}
+
+#landing-page-pricing{
+    border: 0px solid red !important;
+}
+#landing-page-pricing h1{
+    font-weight: 900 !important;
+    font-size: 77px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+}
+#landing-page-pricing .header-pricing-landing{
+    min-height: 600px;
+    background-image: url('../images/bg-landing-page.png');
+    background-size: cover;
+    background-position: top center;
+    padding: 100px;
 }
 
 #pricing{
@@ -403,7 +578,6 @@ h6::before{
 
 #pricing h1{
     font-weight: 900;
-    margin-bottom: 30px;
 }
 
 #pricing img{
@@ -412,11 +586,6 @@ h6::before{
 }
 
 #pricing .header-pricing{
-    background-image: url('../images/geka-pricing-Picture27.png');
-    background-size:fit-content;
-    background-repeat: no-repeat;
-    background-size: 300px;
-    background-position: left bottom;
     padding: 50px 200px 100px 200px;
     margin-bottom: 10px;
     width: 100%;
@@ -462,9 +631,30 @@ h6::before{
 }
 
 .price-tag{
-    padding: 10px 200px 100px 200px;
+    padding: 0px 200px 100px 200px;
     margin-bottom: 10px;
     width: 100%;
+}
+.price-tag .row{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    margin-bottom: 50px;
+    padding: 0px 0px 40px 0px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.price-tag .row .judul-price-tag{
+    color: green;
+    font-weight: 900;
+    padding: 20px 0;
+    background: #e5e5e6;
+    margin-bottom: 30px;
+}
+.price-tag .row .judul-price-tag h1{
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .price-list-menu{
@@ -560,38 +750,170 @@ h6::before{
     width: 100%;
 }
 
-#founders{
-    padding: 25px 0;
+.price-over-lp{
+    width: 100%;
+    border-radius: 24px;
+    background-image: url('../images/bg-price-over-lp.png');
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-color: #201C41;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 70px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-#founders .card{
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border-radius: 32px;
-    border:1px solid rgb(67, 65, 65) !important;
-    color: #ffffff !important;
+.price-over-lp h2{
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Domine', serif;
+    color: #222;
+}
+.price-over-lp p{
+    font-weight: 700;
+    color: #222;
+    padding: 20px 70px;
+}
+
+#price-over-lp{
+    padding: 50px 100px 100px 100px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#why-who-lp{
+    padding: 50px 100px 100px 100px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: fit-content;
+}
+#why-who-lp .row{
+    margin-bottom: 40px;
+    min-height: 400px;
+}
+
+#why-who-lp .col-md-4{
+    padding: 0px 30px;
+    margin-bottom: 40px;
     overflow: hidden;
-    transition: transform 300ms ease-out;
-    background-image: url('../images/bg-9.svg');
+}
+
+#why-who-lp .col-md-4:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    cursor: pointer;
+}
+
+#why-who-lp .col-md-4 img{
+    height: 150px !important;
+    width: auto;
+    padding: 20px;
+}
+#why-who-lp .card{
+    border: none !important;
+    padding: none;
+}
+
+#why-who-lp h3{
+    text-align: center;
+    margin-bottom: 50px !important;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#why-who-lp h5{
+    margin: 10px 0px;
+    font-weight: 700;
+}
+#why-who-lp p{
+    font-size: 14px;
+}
+
+.who-client img{
+    border: 1px solid #dedede96;
+    border-radius: 3px;
+}
+
+.who-client img:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    cursor: pointer;
+}
+
+#harga{
+    background: #ededed85;
+    padding: 100px;
+}
+
+
+.label-sale{
+    border: 2px solid #ff5959;
+    width: fit-content;
+    padding: 20px 30px;
+    background-color: #ff5959;
+    color: #fff !important;
+    margin-top: -105px;
+    margin-bottom: 50px;
+    float: right;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.317) 0px 25px 20px -20px;
+}
+.label-sale h2{
+    color: #fff !important;
+}
+
+.harga-over-lp{
+    width: 100%;
+    border-radius: 24px;
+    background-image: url('../images/bg-price-list2.png');
     background-position: left bottom;
     background-repeat: no-repeat;
-    background-size: 30%;
+    background-size: cover;
+    background-color: #201C41;
+    text-align: left !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 70px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border: 1px solid #ededed;
 }
 
-#founders h2{
+.harga-over-lp h2{
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Domine', serif;
+    color: #222;
+}
+
+.harga-over-lp .price-list-menu{
+    background: none !important;
+    border: none !important;
+}
+
+#outlet{
+    padding: 25px 0;
+}
+#outlet h2{
     font-weight: 700;
     margin-bottom: 30px;
 }
 
-#founders .card{
+#outlet .card{
     border: none !important;
 }
-#founders .card img{
+#outlet .col-md-4 a{
+    text-decoration: none !important;
+}
+
+#outlet .col-md-4{
+    overflow: hidden;
+}
+#outlet .col-md-4 .card-text{
+    padding: 5px;
+    font-size: 14px;
+}
+#outlet .card img{
     width: 150px;
     height: auto;
 }
-#founders h5{
+#outlet h5{
     font-weight: 600;
 }
 
@@ -604,24 +926,18 @@ h6::before{
 }
 
 #impact .col-md-4{
-    padding: 0;
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border-radius: 32px;
-    border:1px solid rgb(67, 65, 65) !important;
-    color: #ffffff !important;
-    overflow: hidden;
-    transition: transform 300ms ease-out;
-    background-image: url('../images/bg-9.svg');
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 30%;
+    padding: 0px 20px 0px 0px;
 }
 #impact .card{
     border: none !important;
-    padding: 10px;
-    background: none !important;
+    padding: 20px 30px;
+    border-radius: 32px;
+    background-image: url('../images/bg-8.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset
 }
 #impact .card-body{
     padding: 0;
@@ -631,6 +947,13 @@ h6::before{
     height: auto;
     padding: 0 !important;
     margin-bottom: 20px;
+}
+#impact .card .bi{
+    font-size: 70px;
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #impact h5{
     font-weight: 600;
@@ -647,18 +970,6 @@ h6::before{
 #values .card-o{
     padding: 10px 20px;
     margin-bottom: 30px;
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-    border-radius: 32px;
-    border:1px solid rgb(67, 65, 65) !important;
-    color: #ffffff !important;
-    overflow: hidden;
-    transition: transform 300ms ease-out;
-    background-image: url('../images/bg-9.svg');
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 30%;
 }
 
 #us-about-services{
@@ -739,17 +1050,21 @@ h6::before{
 }
 
 .services-headline{
-    background-color: rgba(128, 128, 128, 0.1);
+    background-color: rgba(128, 128, 128, 0.1) !important;
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     border-radius: 32px;
     border:1px solid rgb(67, 65, 65) !important;
     overflow: hidden;
-    transition: transform 300ms ease-out;
     padding: 40px 30px 20px 30px !important;
     margin-top: 50px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
+
+.services-headline .card{
+    background: none !important;
+}
+
 .bintangdilangit{
     color: gold;
     margin: 15px;
@@ -762,7 +1077,7 @@ h6::before{
 }
 
 .btn-services-header{
-    background-color: #ff5959 !important;
+    background-color: var(--primary-color) !important;
     border: none !important;
     border-radius: 14px !important;
     padding: 15px 40px !important;
@@ -775,7 +1090,7 @@ h6::before{
     transform: translate(3px, 0px) skew(0deg, 1deg);
 }
 .btn-header{
-    background-color: #ff5959 !important;
+    background-color: var(--primary-color) !important;
     border: none !important;
     border-radius: 14px !important;
     padding: 10px 20px !important;
@@ -787,11 +1102,26 @@ h6::before{
     transition: transform 300ms ease-out;
     transform: translate(3px, 0px) skew(0deg, 1deg);
 }
+.btn-price{
+    background-color: var(--primary-color) !important;
+    border: none !important;
+    border-radius: 14px !important;
+    padding: 5px 20px !important;
+    font-size: 12px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    color: #fff !important;
+    font-weight: 600;
+}
+.btn-price:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: transform 300ms ease-out;
+    transform: translate(3px, 0px) skew(0deg, 1deg);
+}
 .btn-footer{
     background-color: #11d0fb !important;
     border: none !important;
-    border-radius: 14px !important;
-    padding: 10px 20px !important;
+    border-radius: 32px !important;
+    padding: 10px 30px !important;
     font-size: 12pt !important;
 }
 .btn-footer:hover{
@@ -803,7 +1133,6 @@ h6::before{
 .services-headline .card{
     border: none !important;
     text-align: left !important;
-    background: none !important;
 }
 
 .services-headline .card-body{
@@ -817,6 +1146,10 @@ h6::before{
 .services-headline h5{
     font-weight: bold;
     margin-bottom: 15px;
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .services-headline p{
     font-weight: 600;
@@ -824,13 +1157,15 @@ h6::before{
 }
 .services-headline p span{
     font-weight: 800;
-    color: #ac56f5;
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #theservices{
-    padding: 70px 0;
+    padding: 70px 100px;
 }
-
 #theservices .col-md-4{
     margin: 0px 2%;
     width: 31% !important;
@@ -887,7 +1222,7 @@ h6::before{
 
 #theservices ul li{
     border: none !important;
-    font-weight: 600;
+    font-weight: 400;
     margin-left: -17px;
     background: none !important;
     color: #fff !important;
@@ -900,24 +1235,39 @@ h6::before{
 #theservices h2{
     font-weight: bold;
     margin-bottom: 17px;
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #theservices h3{
     font-weight: bold;
     text-align: center;
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #theservices p span{
     font-weight: bold;
     color: #1F1476;
+    background: linear-gradient(90deg, #F860D8 0.06%, #5C4BF6 50.73%, #45BCFF 100.06%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .website{
-    padding: 50px !important;
+    margin: 0px !important;
+}
+.logo{
+    margin: 100px 0px !important;
 }
 .marketing{
-    padding: 50px !important;
+    margin: 100px 0px !important;
 }
 .rencana{
-    padding: 50px !important;
+    margin: 100px 0px !important;
 }
 
 #target-services{
@@ -937,10 +1287,11 @@ h6::before{
 
 .list-group-flush li{
     padding-left: 2em;
-    text-indent: -1.1em;
+    text-indent: -1em;
 }
-.list-group-flush li span{
-    padding-right: 0.5em;
+.list-group-flush li i{
+    padding-right: 0.7em;
+    font-size: 19px;
 }
 
 #intro-footer{
@@ -948,9 +1299,7 @@ h6::before{
     margin-bottom: 100px;
     padding: 40px 50px;
     border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.1);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
+    background-color: #201C41;
     background-image: url('../images/Picture17.svg');
     background-position: left bottom;
     background-repeat: repeat-x;
@@ -959,17 +1308,19 @@ h6::before{
 }
 
 #footer{
-    background-image: url('../images/bg-9.svg');
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    color:#fff !important ;
-    padding: 70px 70px 0 70px;
-    border-top:1px solid rgb(67, 65, 65) !important;
+    background: rgba(231, 240, 238, 0.352);
+    color:#222 !important ;
+    padding: 70px 50px 0 50px;
 }
 
 .intro_footer{
     background-image: url('../images/Picture17.svg');
     color: #fff !important;
+}
+
+#footer .list-group-item{
+    border: none !important;
+    background: none   !important;
 }
 
 #footer h5{
@@ -979,8 +1330,13 @@ h6::before{
 #footer p{
     margin-bottom: 10px;
 }
+
+#footer .bi{
+    margin-right: 10px;
+    color: #222;
+}
 #footer a{
-    color: #fff !important;
+    color: #222 !important;
     text-decoration:none !important;
 }
 
@@ -1001,31 +1357,103 @@ h6::before{
         width: 100% !important;
     }
 
-    #theservices .col-md-4{
-        margin: 20px 0 !important;
-        width: 100% !important;
-    }
-    #theservices .col-md-8{
-        margin: 20px 0 !important;
+    .col-md-4{
+        margin-bottom: 20px;
         width: 100% !important;
     }
     .col-md-6{
-        margin-bottom: 40px;
         width: 100% !important;
-        margin-left: 2%;
+        padding: 0px 30px;
     }
 
     #header-page{
-        padding: 50px 10px;
+        padding: 50px 10px 100px 10px;
         min-height: auto;
+        background-position: right bottom;
+        background-image: url('../images/bg-header-coffee-hp.png');
     }
 
-    .col-md-6 img{
-        padding: 10px 50px;
+    #header-page h1{
+        font-size: 44px;
+    }
+
+    #header-page p{
+        font-size: 17px;
     }
 
     #header-page img{
         width: 100%;
+    }
+
+    #header-page-menu{
+        min-height: auto;
+        padding: 10px;
+    }
+
+    #layanan{
+        padding: 50px 0px 50px 0px;
+        min-height: auto;
+    }
+
+    #layanan .col-md-6 p{
+        padding: 50px 20px 0px 20px;
+        font-size: 14px;
+    }
+
+    #layanan img{
+        border-radius: 0px !important;
+        width: 100%;
+    }
+
+    #layanan .align-self-center{
+        text-align: center !important;
+        margin-top: 30px;
+    }
+
+    #menu-coffee{
+        padding: 50px 0px 0px 0px;
+    }
+
+    #menu-coffee h1{
+        font-size: 44px;
+        padding: 0px 20px;
+    }
+    #menu-coffee h6{
+        padding: 0px 20px;
+    }
+
+    #menu-coffee img{
+        border-radius: 0px;
+    }
+
+    #menu-coffee .align-self-center{
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+    #promo-coffee{
+        padding: 50px 0px 0px 0px;
+    }
+
+    #promo-coffee h1{
+        font-size: 44px;
+        padding: 0px 20px;
+    }
+    #promo-coffee h6{
+        padding: 0px 20px;
+    }
+
+    #promo-coffee img{
+        border-radius: 0px;
+    }
+
+    #promo-coffee .align-self-center{
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+
+    #promo-coffee img{
+        width: 100%;
+        padding: 10px 20px;
     }
 
     #journey img{
@@ -1036,21 +1464,62 @@ h6::before{
     #milestone{
         padding: 10px;
     }
+    #milestone p{
+        font-size: 12px;
+    }
 
     #milestone .ms-a{
-        margin-top: -20px;
-        border-radius: 12px;
+        margin-top: -70px;
+        border-radius: 32px;
+        padding: 10px 20px;
+        overflow: hidden;
+    }
+    #milestone .ms-o{
         padding: 0;
     }
+
+    #milestone .col-md-4{
+        width: 30% !important;
+    }
+    #milestone .col-md-8{
+        width: 70% !important;
+    }
+
     #konten{
         padding: 10px;
     }
 
+    #konten p{
+        font-size: 12px;
+    }
+
     #konten .ms-a{
-        margin-top: -20px;
+        margin-top: -70px;
         margin-bottom: 50px;
         border-radius: 12px;
-        padding: 0;
+        padding: 0px !important;
+        background:none !important;
+        box-shadow: none;
+    }
+    #konten .ms-o{
+        padding: 20px 15px;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset
+    }
+
+    #konten .col-md-3{
+        width: 30% !important;
+    }
+    #konten .col-md-3 img{
+        width: 80% !important;
+    }
+    #konten .col-md-9{
+        width: 70% !important;
+    }
+    #konten .col-md-9 h5{
+        font-size: 1.1rem;
     }
 
     #about .img-about{
@@ -1068,29 +1537,103 @@ h6::before{
         margin-bottom: 20px;
     }
 
-    .website{
-        padding: 20px !important;
-    }
-    .marketing{
-        padding: 20px !important;
-    }
-    .rencana{
-        padding: 20px !important;
+    #services .card-o{
+        background-color: rgba(128, 128, 128, 0.1) !important;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        border-radius: 32px;
+        border:1px solid #65686937!important;
+        padding: 0px !important;
+        background-image: url('../images/bg-8.svg');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 30%;
+        border-radius: 11px;
+        overflow: hidden;
     }
 
-    #theservices h4{
-        padding: 0px 30px;
+    #services span{
+        padding-bottom: 10px;
+        background-color: #65686937;
+    }
+    #services h5{
+        margin-top: -15px;
+        margin-bottom: 20px;
+    }
+    #services .card-text{
+        font-size: 14px;
+    }
+    #theservices{
+        padding: 0px 30px 150px 30px;
+        margin: 0;
     }
     #theservices p{
         padding: 0px 30px;
     }
+    #theservices .col-md-4{
+        padding: 40px 30px;
+        overflow: hidden !important;
+        width: 100% !important;
+        margin: 0px 0px ;
+    }
     #theservices .col-md-8{
         padding: 40px 0px 0px 0px ;
         overflow: hidden !important;
+        width: 100% !important;
+        margin: 0px ;
     }
     #theservices .col-md-8 img{
         width: 100%;
         margin-top: 30px;
+    }
+
+    .website{
+        padding: 0 !important;
+        margin: 30px 0px 0px 0px !important;
+
+    }
+
+    .website .col-md-4{
+        border-radius: 32px 32px 0px 0px !important;
+    }
+    .website .col-md-8{
+        border-radius: 0px 0px 32px 32px !important;
+    }
+
+    .logo{
+        padding: 0 !important;
+        margin: 30px 0px 0px 0px !important;
+    }
+
+    .logo .col-md-8{
+        border-radius: 32px 32px 0px 0px !important;
+    }
+    .logo .col-md-4{
+        border-radius: 0px 0px 32px 32px !important;
+    }
+
+    .marketing{
+        padding: 0 !important;
+        margin: 30px 0px 0px 0px !important;
+    }
+
+    .marketing .col-md-8{
+        border-radius: 32px 32px 0px 0px !important;
+    }
+    .marketing .col-md-4{
+        border-radius: 0px 0px 32px 32px !important;
+    }   
+
+    .rencana{
+        padding: 0 !important;
+        margin: 30px 0px 0px 0px !important;
+    }
+
+    .rencana .col-md-4{
+        border-radius: 32px 32px 0px 0px !important;
+    }
+    .rencana .col-md-8{
+        border-radius: 0px 0px 32px 32px !important;
     }
 
     #us-about{
@@ -1111,11 +1654,11 @@ h6::before{
     }
 
     #footer{
-        padding: 10px;
+        padding: 70px 10px;
     }
 
     #intro-footer{
-        margin-top: 0;
+        margin-top: -50px;
     }
 
     .copirait{
@@ -1134,13 +1677,13 @@ h6::before{
         padding: 10px;
     }
 
-    #price-over{
-        padding: 10px;
+    #price-over-lp{
+        padding: 70px 0px;
     }
-    .price-over{
+    .price-over-lp{
         padding: 30px 10px;
     }
-    .price-over p{
+    .price-over-lp p{
         padding: 10px;
     }
 
@@ -1150,7 +1693,7 @@ h6::before{
     }
 
     #services-header-page{
-        padding: 90px 10px 10px 10px;
+        padding: 90px 20px 20px 20px;
         border-radius: 0;
         margin-top: 0;
     }
@@ -1163,7 +1706,178 @@ h6::before{
         margin-bottom: 40px;
     }
     .services-headline{
-        padding: 30px 20px !important;
+        padding: 0px !important;
         margin-bottom: 50px;
+        border: none !important;
+        background: none !important;
+        border-radius: 0px !important;
+    }
+    .services-headline h5{
+        margin: 0px !important;
+        font-size: 14px !important;
+        text-align: center !important;
+    }
+    .services-headline img{
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10%;
+        margin: 0px;
+    }
+
+    .services-headline .ms-o{
+        width: 33.33333% !important;
+        float: left;
+    }
+    .services-headline .ms-o .card{
+        background-color: rgba(128, 128, 128, 0.1) !important;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        border-radius: 32px;
+        border:1px solid rgb(67, 65, 65) !important;
+        padding: 5px;
+        background-image: url('../images/bg-8.svg');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 30%;
+        border-radius: 11px;
+        overflow: hidden;
+    }
+
+    .services-headline .card-text{
+        display: none;
+    }
+
+    #outlet .card{
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset
+    }
+    #outlet .col-md-4{
+        width: 100% !important;
+        padding: 0px;
+    }
+    #outlet .col-md-4 iframe{
+        width: 100% !important;
+        padding: 0px;
+    }
+    #outlet .col-md-8{
+        width: 100% !important;
+    }
+    #outlet .col-md-8 .card-body{
+        padding: 10px 0px 10px 20px;
+    }
+    #outlet .col-md-8 .card-body .card-title {
+        font-size: 16px;
+    }
+    #outlet .col-md-8 .card-body .card-text {
+        font-size: 12px;
+    }
+
+    #impact .col-md-4{
+        padding: 0px 10px 0px 0px;
+        width: 33.333% !important;
+    }
+
+    #impact .card{
+        padding: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset
+    
+    }
+    #impact .card .card-title{
+        font-size: 16px;
+        font-weight: 900;
+    }
+    #impact .card .card-text{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    #impact .card .bi{
+        font-size: 50px;
+    }
+
+    #landing-page-pricing .header-pricing-landing {
+        padding: 50px 20px;
+        background-position: right bottom;
+        background-image: url('../images/paket-website-umkm-hanya-900k-gratis-5.png');
+    }
+
+    #landing-page-pricing .header-pricing-landing h1{
+        font-size: 55px;
+    }
+
+    #why-who-lp{
+        padding: 50px 20px;
+    }
+
+    #why-who-lp h5{
+        margin: 15px 0px 10px 0px !important;
+    }
+    #why-who-lp .row{
+        min-height: auto;
+    }
+
+    #why-who-lp .col-md-4{
+        padding: 10px;
+        width: 33.33333% !important;
+    }
+
+    #why-who-lp .col-md-4 img{
+        padding: 0 !important;
+        height: 50px !important;
+    }
+
+    #why-who-lp .col-md-4 .card{
+        border: 1px solid #dedede !important;
+        padding: 5px;
+        background-color: #EDEDED !important;
+    }
+    #why-who-lp .col-md-4 .card-body{
+        padding: 0 !important;
+    }
+    #why-who-lp .col-md-4 .card-title{
+        font-size: 12px !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    #why-who-lp .col-md-4 .card-text{
+        display: none;
+    }
+
+    .who-client .col-md-3{
+        width: 33.333%;
+        padding: 5px;
+    }
+
+    #harga{
+        padding: 50px 20px;
+    }
+
+    #harga .btn-services-header{
+        font-size: 14px !important;
+        text-align: center;
+    }
+
+    .harga-over-lp{
+        padding: 50px 10px;
+        background-position: right bottom !important;
+    }
+
+    .harga-over-lp h2{
+        text-align: center;
+        font-size: 22px !important;
+        margin-top: 20px !important;
+    }
+
+    .price-list-menu{
+        font-size: 12px !important;
+        font-weight: 700;
+    }
+
+    .label-sale{
+        padding: 0px 10px;
+        margin-bottom: 0px;
+        margin-top: -115px;
     }
 }
